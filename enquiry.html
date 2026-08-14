@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry - Rudzani Community Outreach</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="logo-text">Rudzani Community Outreach</div>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="programmes.html">Programmes</a></li>
+                <li><a href="enquiry.html" class="active">Enquiry</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Volunteer or Donor Enquiry Form</h1>
+        <p>Please complete the structured form below if you would like to sign up as a volunteer or enquire about becoming an official donor/sponsor.</p>
+
+        <br>
+
+        <form id="enquiryForm" onsubmit="return validateEnquiryForm(event)">
+            <div class="form-group">
+                <label for="fullName">Full Name *</label>
+                <input type="text" id="fullName" placeholder="e.g. Tendani Ndou">
+            </div>
+
+            <div class="form-group">
+                <label for="emailAddress">Email Address *</label>
+                <input type="email" id="emailAddress" placeholder="e.g. tendani@example.com">
+            </div>
+
+            <div class="form-group">
+                <label for="enquiryType">Enquiry Type *</label>
+                <select id="enquiryType">
+                    <option value="">-- Select Option --</option>
+                    <option value="Volunteer Sign-Up">Volunteer Sign-Up</option>
+                    <option value="Donor / Sponsor Enquiry">Donor / Sponsor Enquiry</option>
+                    <option value="General Information">General Information</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="messageText">Message / Details *</label>
+                <textarea id="messageText" rows="5" placeholder="How would you like to assist or collaborate with us?"></textarea>
+            </div>
+
+            <button type="submit" class="btn-action">Submit Enquiry</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Rudzani Community Outreach (NPO). Registered Non-Profit Organisation in South Africa.</p>
+    </footer>
+
+</body>
+</html>
