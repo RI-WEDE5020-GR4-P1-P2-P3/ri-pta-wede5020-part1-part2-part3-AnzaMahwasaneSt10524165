@@ -41,7 +41,6 @@ This project was developed as a Portfolio of Evidence (PoE) submission for the D
 3. Right-click on `index.html` and select **"Open with Live Server"**.
 
 ## 3 Repository Structure
-.
 ├── css/
 │   └── style.css
 ├── images/
@@ -62,8 +61,7 @@ This project was developed as a Portfolio of Evidence (PoE) submission for the D
 ├── programmes.html
 └── README.md
 
-PART 1
-
+###PART 1
 * **Added** Added 5 files(index.html, about.html, enquiry.html, programmes.html,contact.html)
 * **Added** Footers and headers
 * **Added** Div classes
@@ -92,19 +90,22 @@ PART 2
 * **Added** Implemented responsive `@media` query rules to stack page elements cleanly on mobile viewports
 * **Added** type="video/mp4" to all <source> elements.
 
+
 ####FIXED
 Linked missing `style.css` file on `about.html` to resolve standard vertical list rendering.
 Changed control to controls on all three video elements.
 Added the missing </article> closing tag after the third card's paragraph.
+Standardised all five HTML files to href="css/style.css" (lowercase css/).
+Added the missing </div> closing tag after the third article, before </main>.
+Added name="fullName", name="emailAddress", name="enquiryType", and name="messageText" to the respective elements. Also added required attributes to enforce HTML5 native validation as a secondary layer alongside the JavaScript validation.
+
 
 ## Part 2 Evidence Screenshots
 
 ### Desktop View (1024px+)
 ![Desktop Layout](./images/desktop%20screenshot.png)
-
 ### Tablet View (768px - 1023px)
 ![Tablet Layout](./images/tablet%20screenshot.png)
-
 ### Mobile View (767px and below)
 ![Mobile Layout](./images/tablet%20screenshot.png)
 
