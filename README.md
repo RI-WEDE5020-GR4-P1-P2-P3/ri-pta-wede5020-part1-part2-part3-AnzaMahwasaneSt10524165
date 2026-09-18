@@ -5,6 +5,7 @@
 # Rudzani Community Outreach - Website Development
 
 ## 1 Table of Contents
+
 Project Overview
 Proposal Summary
 File and Folder Structure
@@ -16,6 +17,7 @@ Changelog
 References
 
 ## 2 Project Overview
+
 An interactive, responsive website for **Rudzani Community Outreach**, a registered Non-Profit Organisation (NPO) founded in 2018 in Tshisaulu, Thohoyandou, Limpopo. The website serves as a digital presence to inform parents, volunteers, corporate sponsors, and community members about youth empowerment programmes and daily nutritional support.
 
 This project was developed as a Portfolio of Evidence (PoE) submission for the Diploma in Information Technology in Software Development at The IIE's Rosebank College.
