@@ -41,14 +41,26 @@ This project was developed as a Portfolio of Evidence (PoE) submission for the D
 3. Right-click on `index.html` and select **"Open with Live Server"**.
 
 ## 3 Repository Structure
-```text
-/
-├── index.html          # Homepage and Hero section
-├── about.html          # Mission, Vision, and Target Audience
-├── programmes.html     # Details on Tutoring, Nutrition, and Workshops
-├── enquiry.html        # Interactive contact form
-├── style.css           # Global stylesheet and responsive media queries
-└── README.md           # Project documentation
+.
+├── css/
+│   └── style.css
+├── images/
+│   ├── desktop screenshot.png
+│   ├── tablet  screenshot.png
+│   ├── mobile  screenshot.png
+│   ├── Daily nutrition.png
+│   ├── After school tutoring...
+│   └── Youth empowerment...
+├── Videos/
+│   ├── Daily nutrition...
+│   ├── Learning.mp4.mp4
+│   └── ...
+├── about.html
+├── contact.html
+├── enquiry.html
+├── index.html
+├── programmes.html
+└── README.md
 
 PART 1
 
@@ -88,13 +100,13 @@ Added the missing </article> closing tag after the third card's paragraph.
 ## Part 2 Evidence Screenshots
 
 ### Desktop View (1024px+)
-![Desktop Layout](./desktop screenshot.png)
+![Desktop Layout](./images/desktop%20screenshot.png)
 
 ### Tablet View (768px - 1023px)
-![Tablet Layout](./tablet screenshot.png)
+![Tablet Layout](./images/tablet%20screenshot.png)
 
 ### Mobile View (767px and below)
-![Mobile Layout](./mobile screenshot.png)
+![Mobile Layout](./images/tablet%20screenshot.png)
 
 #### REFERENCES
 Google Fonts. (2024). Nunito. https://fonts.google.com/specimen/Nunito
