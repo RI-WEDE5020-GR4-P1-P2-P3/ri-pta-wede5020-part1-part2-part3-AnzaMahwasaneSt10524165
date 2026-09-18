@@ -6,8 +6,8 @@
 
 ## 1 Table of Contents
 
-Project Overview
-Proposal Summary
+**Project Overview
+**Proposal Summary
 File and Folder Structure
 Technologies Used
 Pages Description
