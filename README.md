@@ -98,13 +98,13 @@ Added name="fullName", name="emailAddress", name="enquiryType", and name="messag
 ## Part 2 Evidence Screenshots
 
 ### Desktop View (1024px+)
-![Desktop Layout](./images/desktop screenshot.png)
+![Desktop Layout](./images/screenshotdesktop.png)
 
 ### Tablet View (768px - 1023px)
-![Tablet Layout](./tablet screenshot.png)
+![Tablet Layout](./images/screenshottablet.png)
 
 ### Mobile View (767px and below)
-![Mobile Layout](./mobile screenshot.png)
+![Mobile Layout](./images/screenshot-mobile.png)
 
 #### REFERENCES
 Google Fonts. (2024). Nunito. https://fonts.google.com/specimen/Nunito
