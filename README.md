@@ -107,7 +107,7 @@ Added name="fullName", name="emailAddress", name="enquiryType", and name="messag
 ### Tablet View (768px - 1023px)
 ![Tablet Layout](./images/tablet%20screenshot.png)
 ### Mobile View (767px and below)
-![Mobile Layout](./images/tablet%20screenshot.png)
+![Mobile Layout](./images/mobile%20screenshot.png)
 
 #### REFERENCES
 Google Fonts. (2024). Nunito. https://fonts.google.com/specimen/Nunito
