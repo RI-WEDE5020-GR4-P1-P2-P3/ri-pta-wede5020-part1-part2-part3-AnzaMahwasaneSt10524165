@@ -3,10 +3,13 @@
 
 
 # Rudzani Community Outreach - Website Development
+## ANZA MAHWASANE
+## IIE ROSEBANK INTERNATIONAL
+## PORTFOLIO OF EVIDENCE
 
 ## 1 Table of Contents
-2.Project Overview
-3.Proposal Summary
+1.Project Overview
+2.Proposal Summary
 4.Technologies Used
 5.Build With
 6.How To View Website
