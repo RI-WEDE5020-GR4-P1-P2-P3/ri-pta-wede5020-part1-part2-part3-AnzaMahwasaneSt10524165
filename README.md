@@ -92,12 +92,13 @@ PART 2
 
 
 ####FIXED
-Linked missing `style.css` file on `about.html` to resolve standard vertical list rendering.
-Changed control to controls on all three video elements.
-Added the missing </article> closing tag after the third card's paragraph.
-Standardised all five HTML files to href="css/style.css" (lowercase css/).
-Added the missing </div> closing tag after the third article, before </main>.
-Added name="fullName", name="emailAddress", name="enquiryType", and name="messageText" to the respective elements. Also added required attributes to enforce HTML5 native validation as a secondary layer alongside the JavaScript validation.
+## 
+
+* **Fixed:** Added missing closing `>` bracket on the header navigation in `index.html`.
+* **Fixed:** Corrected image folder paths in `README.md` so evidence screenshots render inline.
+* **Fixed:** Standardised all five HTML files to href="css/style.css" (lowercase css/).
+* **Fixed:** Added name="fullName", name="emailAddress", name="enquiryType", and name="messageText" to the respective elements. Also added required attributes to enforce HTML5 native validation as a secondary layer alongside the JavaScript validation.
+* **Fixed:** Added the missing </div> closing tag after the third article, before </main>.
 
 
 ## Part 2 Evidence Screenshots
