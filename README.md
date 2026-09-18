@@ -4,7 +4,7 @@
 
 # Rudzani Community Outreach - Website Development
 
-Table of Contents
+## 1 Table of Contents
 Project Overview
 Proposal Summary
 File and Folder Structure
@@ -15,20 +15,47 @@ Screenshots
 Changelog
 References
 
-## 1 Project Overview
+## 2 Project Overview
 An interactive, responsive website for **Rudzani Community Outreach**, a registered Non-Profit Organisation (NPO) founded in 2018 in Tshisaulu, Thohoyandou, Limpopo. The website serves as a digital presence to inform parents, volunteers, corporate sponsors, and community members about youth empowerment programmes and daily nutritional support.
 
 This project was developed as a Portfolio of Evidence (PoE) submission for the Diploma in Information Technology in Software Development at The IIE's Rosebank College.
 
-## 2 Proposal summary
+## 3 Proposal summary
 
-## 2 Built With
+Approved Proposal: Proposal 1 — Rudzani Community Outreach Website
+
+Goals:
+
+Create an accessible and informative website representing a real community NPO in Limpopo.
+Provide information about the organisation's daily nutritional programme, after-school tutoring, and youth empowerment workshops.
+Offer a volunteer and donor enquiry form to facilitate community engagement.
+
+Target Audience:
+
+Parents and guardians of children in the Tshisaulu area.
+Student volunteers from local universities and colleges.
+Corporate donors and sponsors.
+The general public interested in community development in Limpopo.
+
+## 4 Technologies Used
+Technology	Purpose
+HTML5	Page structure and semantic elements
+CSS3	Styling, layout (Flexbox + CSS Grid), and responsive design
+Google Fonts	Nunito typeface (weights 400, 600, 700, 800) via @import
+CSS Custom Props	Design token system for colours, spacing, and typography
+CSS Media Queries	Responsive breakpoints for desktop, tablet, and mobile
+JavaScript (ES6)	Client-side form validation on the Enquiry page
+Unsplash	Free stock photography (srcset and picture elements implemented)
+Pexels	Free stock video for the Programmes page
+Git / GitHub	Version control and remote repository hosting
+
+## 5 Built With
 * **HTML5:** Semantic structuring and multi-page routing.
 * **CSS3:** Custom styling, CSS Variables, Flexbox, and CSS Grid layout models.
 * **Google Fonts:** Utilizing 'Nunito' for modern typography.
 * **Responsive Design:** Mobile-first media queries for cross-device compatibility.
 
-## 2 How to View the Website
+## 6 How to View the Website
 
 ### Option A: Local Browser
 1. Clone or download the repository to your local machine.
@@ -40,7 +67,7 @@ This project was developed as a Portfolio of Evidence (PoE) submission for the D
 2. Install the **Live Server** extension.
 3. Right-click on `index.html` and select **"Open with Live Server"**.
 
-## 3 Repository Structure
+## 7 Repository Structure
 ├── css/
 │   └── style.css
 ├── images/
@@ -61,16 +88,9 @@ This project was developed as a Portfolio of Evidence (PoE) submission for the D
 ├── programmes.html
 └── README.md
 
-##PART 1
-* **Added:** Added 5 files(index.html, about.html, enquiry.html, programmes.html,contact.html)
-* **Added:** Footers and headers
-* **Added:** Div classes
-* **Added:** images folder
-
-
 PART 2
 
-## 4 Changelog
+## 7 Changelog
 
 ### [v1.1.0] - Part 2 Layout & Responsive Upgrade
 * **Added:** CSS file and a link all five HTML pages
@@ -110,7 +130,11 @@ PART 2
 ![Mobile Layout](./images/mobile%20screenshot.png)
 
 #### REFERENCES
-Google Fonts. (2024). Nunito. https://fonts.google.com/specimen/Nunito
-Pexels. (2024). Free stock videos. https://www.pexels.com
 GitHub Docs. (2024). About commits. https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/about-commits
-MDN Web Docs. (2024). CSS: Cascading Style Sheets. Mozilla. https://developer.mozilla.org/en-US/docs/Web/CSS
+Google Fonts. (2024). Nunito. https://fonts.google.com/specimen/Nunito
+MDN Web Docs. (2024). Responsive images. Mozilla. https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images
+MDN Web Docs. (2024). Using media queries. Mozilla. https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries
+Pexels. (2024). Free stock videos. https://www.pexels.com
+W3Schools. (2024). CSS Flexbox. https://www.w3schools.com/css/css3_flexbox.asp
+W3Schools. (2024). CSS Grid Layout. https://www.w3schools.com/css/css_grid.asp
+W3Schools. (2024). HTML  Tag. https://www.w3schools.com/tags/tag_video.asp
