@@ -1,0 +1,569 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+:root {
+    /* --- Colour Palette --- */
+    --colour-ink:       #15202b;   
+    --colour-forest:    #2d6a4f;   /* Forest green — buttons and section emphasis */
+    --colour-sage:      #52b788;   /* Sage green — hover and focus states */
+    --colour-sunlight:  #f5b942;   /* Golden amber — call-to-action and highlights */
+    --colour-paper:     #f4f7f5;   /* Faintly green-tinted off-white — page background */
+    --colour-cloud:     #ffffff;   /* White — card and form surfaces */
+    --colour-text:      #1f2d3d;   /* Dark slate — primary body text */
+    --colour-muted:     #4a5568;   /* Muted gray — secondary text and placeholders */
+    --colour-border:    #cde3d9;   /* Light green — borders and dividers */
+    --colour-footer-bg: #0d1b25;   
+
+    /* --- Typography Scale --- */
+    --font-family-base: 'Nunito', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    --font-size-xs:     0.75rem;   /* 12px */
+    --font-size-sm:     0.875rem;  /* 14px */
+    --font-size-base:   1rem;      /* 16px */
+    --font-size-md:     1.125rem;  /* 18px */
+    --font-size-lg:     1.375rem;  /* 22px */
+    --font-size-xl:     1.75rem;   /* 28px */
+    --font-size-2xl:    2.25rem;   /* 36px */
+    --font-size-3xl:    2.875rem;  /* 46px */
+
+    /* --- Spacing Scale --- */
+    --space-xs:   0.5rem;
+    --space-sm:   0.75rem;
+    --space-md:   1rem;
+    --space-lg:   1.5rem;
+    --space-xl:   2rem;
+    --space-2xl:  2.5rem;
+    --space-3xl:  3.5rem;
+
+    /* --- Layout --- */
+    --max-width:         1200px;
+    --border-radius-sm:  5px;
+    --border-radius-md:  8px;
+    --border-radius-lg:  12px;
+
+    /* --- Shadows --- */
+    --shadow-card:   0 2px 8px rgba(21, 32, 43, 0.08);
+    --shadow-raised: 0 6px 20px rgba(21, 32, 43, 0.14);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box; /* Includes padding and border in element dimensions */
+    margin:  0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;        /* Base: all rem values are relative to this */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:      var(--font-family-base);
+    font-size:        var(--font-size-base);
+    font-weight:      400;
+    line-height:      1.65;
+    color:            var(--colour-text);
+    background-color: var(--colour-paper);
+    min-height:       100vh;
+    display:          flex;
+    flex-direction:   column; /* Allows the footer to stick to the bottom */
+}
+
+/* Reset lists used for navigation */
+ul {
+    list-style: none;
+}
+
+/* Remove default link underline; colour is applied per context */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Make images and video block elements that scale responsively */
+img,
+video {
+    display:   block;
+    max-width: 100%;
+    height:    auto;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family:    var(--font-family-base);
+    font-weight:    800;
+    line-height:    1.25;
+    color:          var(--colour-ink);
+    letter-spacing: -0.025em;
+    margin-bottom:  var(--space-sm);
+}
+
+h1 { font-size: var(--font-size-2xl); }   /* 36px */
+h2 { font-size: var(--font-size-xl);  }   /* 28px */
+h3 { font-size: var(--font-size-lg);  }   /* 22px */
+
+p {
+    font-size:     var(--font-size-base);
+    font-weight:   400;
+    line-height:   1.7;
+    color:         var(--colour-muted);
+    margin-bottom: var(--space-md);
+    max-width:     72ch; /* Limits line length to ~72 characters for readability */
+}
+
+/* Remove max-width constraint inside hero and CTA sections */
+.hero-box p,
+.cta-banner p {
+    max-width: none;
+}
+
+strong {
+    font-weight: 700;
+    color:       var(--colour-ink);
+}
+
+li {
+    font-size:  var(--font-size-base);
+    line-height: 1.8;
+    color:      var(--colour-muted);
+}
+
+/* --- 4.1 Header — Flexbox Horizontal Layout --- */
+header {
+    background-color: var(--colour-ink);
+    padding:          var(--space-md) var(--space-xl);
+    display:          flex;
+    flex-direction:   row;
+    justify-content:  space-between;
+    align-items:      center;
+    position:         sticky;
+    top:              0;
+    z-index:          100; 
+    box-shadow:       0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Organisation logo/brand text in the header */
+.logo-text {
+    font-size:      1.25rem;
+    font-weight:    800;
+    color:          var(--colour-cloud);
+    letter-spacing: 0.01em;
+    white-space:    nowrap;
+}
+
+/* --- 4.2 Navigation — Flexbox Horizontal List --- */
+header nav ul {
+    display:     flex;
+    flex-direction: row;
+    align-items: center;
+    gap:         0.2rem;
+}
+
+header nav ul li a {
+    display:        block;
+    padding:        0.45rem 0.9rem;
+    font-size:      var(--font-size-sm);
+    font-weight:    600;
+    color:          #b2c8d8;   /* Muted blue-white for unvisited links */
+    border-radius:  var(--border-radius-sm);
+    letter-spacing: 0.01em;
+    transition:     background-color 0.2s ease, color 0.2s ease;
+}
+
+/* --- 4.3 Main Content Area — Centred, with vertical stacking --- */
+main {
+    max-width: var(--max-width);
+    width:     100%;
+    margin:    0 auto;            /* Centres the content area horizontally */
+    padding:   var(--space-2xl) var(--space-xl);
+    flex:      1;                 /* Fills available vertical space (footer pushed down) */
+}
+
+/* Vertical spacing between major sections inside main */
+main > section,
+main > div {
+    margin-bottom: var(--space-2xl);
+}
+
+/* --- 4.4 Card Grid — CSS Grid, Three Columns on Desktop --- */
+.card-grid {
+    display:               grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    gap:                   var(--space-lg);
+    align-items:           start;
+}
+
+/* --- 4.5 Individual Card — Flexbox Column Stack --- */
+.card {
+    background-color: var(--colour-cloud);
+    border:           1px solid var(--colour-border);
+    border-radius:    var(--border-radius-md);
+    padding:          var(--space-lg);
+    display:          flex;
+    flex-direction:   column;
+    gap:              var(--space-sm);
+    box-shadow:       var(--shadow-card);
+    /*
+        'transition' smooths a change between states (Slide 29).
+        Both box-shadow and transform are transitioned so the hover
+        effect feels polished rather than jarring.
+    */
+    transition:       box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+/* Images and videos inside cards */
+.card img,
+.card video {
+    width:         100%;
+    height:        200px;
+    object-fit:    cover;
+    border-radius: var(--border-radius-sm);
+}
+
+/* --- 4.6 Hero Section — Flexbox Centred Column --- */
+.hero-box {
+    background:    linear-gradient(135deg, var(--colour-ink) 0%, #1e3a5f 100%);
+    color:         var(--colour-cloud);
+    border-radius: var(--border-radius-lg);
+    padding:       var(--space-3xl) var(--space-2xl);
+    display:       flex;
+    flex-direction: column;
+    align-items:   center;
+    gap:           var(--space-lg);
+    text-align:    center;
+    margin-bottom: var(--space-2xl);
+}
+
+.hero-box h1 {
+    color:     var(--colour-cloud);
+    font-size: var(--font-size-3xl);
+    max-width: 16ch;
+}
+
+.hero-box p {
+    color:     #b2c8d8;
+    font-size: var(--font-size-md);
+    max-width: 52ch;
+}
+
+/* --- 4.7 CTA Banner — Flexbox Row, Space Between --- */
+.cta-banner {
+    background-color: var(--colour-sunlight);
+    border-radius:    var(--border-radius-md);
+    padding:          var(--space-xl) var(--space-2xl);
+    display:          flex;
+    flex-direction:   row;
+    justify-content:  space-between;
+    align-items:      center;
+    gap:              var(--space-lg);
+}
+
+.cta-banner p {
+    color:       var(--colour-ink);
+    font-size:   var(--font-size-md);
+    font-weight: 700;
+    max-width:   none;
+    margin:      0;
+}
+
+/* --- 4.8 Enquiry Form — Flexbox Column --- */
+#enquiryForm {
+    background-color: var(--colour-cloud);
+    border:           1px solid var(--colour-border);
+    border-radius:    var(--border-radius-md);
+    padding:          var(--space-xl);
+    max-width:        680px;
+    display:          flex;
+    flex-direction:   column;
+    gap:              var(--space-lg);
+    box-shadow:       var(--shadow-card);
+}
+
+/* Label + input stacked vertically */
+.form-group {
+    display:        flex;
+    flex-direction: column;
+    gap:            0.35rem;
+}
+
+.form-group label {
+    font-size:   var(--font-size-sm);
+    font-weight: 700;
+    color:       var(--colour-ink);
+    letter-spacing: 0.01em;
+}
+
+/* Shared styles for input, select, and textarea */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    font-family:      inherit;
+    font-size:        var(--font-size-base);
+    padding:          0.65rem 0.9rem;
+    border:           1.5px solid var(--colour-border);
+    border-radius:    var(--border-radius-sm);
+    background-color: var(--colour-paper);
+    color:            var(--colour-text);
+    width:            100%;
+    transition:       border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+/* --- 4.9 Footer — Centred Content --- */
+footer {
+    background-color: var(--colour-footer-bg);
+    color:            #7a9bb5;
+    text-align:       center;
+    padding:          var(--space-lg) var(--space-xl);
+    margin-top:       auto; /* Pushes footer to the bottom of the page */
+}
+
+footer p {
+    font-size:     var(--font-size-sm);
+    color:         #7a9bb5;
+    margin-bottom: 0.25rem;
+    max-width:     none;
+}
+
+
+/* ==========================================================================
+   SECTION 5 — VISUAL STYLES: DECORATION AND COLOUR
+   Applies colour schemes, borders, and box-shadows to style elements visually.
+   ========================================================================== */
+
+/* --- 5.1 Section Heading Underline Accent --- */
+main section h1,
+main section h2 {
+    padding-bottom:  0.5rem;
+    border-bottom:   3px solid var(--colour-sage);
+    display:         inline-block;
+    margin-bottom:   var(--space-md);
+}
+
+/* Target audiences list in about.html */
+main section ul {
+    padding-left: 1.25rem;
+    list-style:   disc;
+}
+
+main section ul li {
+    margin-bottom: 0.4rem;
+}
+
+/* --- 5.2 Action Button — Gold Background, Dark Text --- */
+.btn-action {
+    display:          inline-block;
+    background-color: var(--colour-sunlight);
+    color:            var(--colour-ink);
+    padding:          0.7rem 1.75rem;
+    border-radius:    var(--border-radius-sm);
+    font-family:      inherit;
+    font-size:        var(--font-size-base);
+    font-weight:      800;
+    letter-spacing:   0.02em;
+    border:           2px solid transparent;
+    cursor:           pointer;
+    transition:       background-color 0.2s ease, color 0.2s ease,
+                      box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+/* --- 5.3 Contact Detail Card --- */
+.card h2 {
+    color:       var(--colour-ink);
+    font-size:   var(--font-size-xl);
+    border:      none;
+    display:     block;
+    padding:     0;
+}
+
+
+/* ==========================================================================
+   SECTION 6 — PSEUDO-CLASSES
+   Creates interactive states for links, buttons, inputs, and cards.
+   Pseudo-classes used: :hover, :focus, :active.
+   ========================================================================== */
+
+/* --- 6.1 Navigation Link: hover --- */
+header nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color:            var(--colour-cloud);
+}
+
+/* --- 6.2 Navigation Link: active page --- */
+header nav ul li a.active {
+    background-color: var(--colour-sunlight);
+    color:            var(--colour-ink);
+    font-weight:      800;
+}
+
+/* --- 6.3 Navigation Link: :active (pressed) --- */
+header nav ul li a:active {
+    background-color: #d4a017;
+    color:            var(--colour-ink);
+}
+
+/* --- 6.4 Navigation Link: :focus (keyboard accessibility) --- */
+header nav ul li a:focus {
+    outline:        3px solid var(--colour-sunlight);
+    outline-offset: 2px;
+    border-radius:  var(--border-radius-sm);
+}
+
+/* --- 6.5 Card: :hover — deepens shadow on interaction --- */
+.card:hover {
+    box-shadow: var(--shadow-raised);
+}
+
+/* --- 6.6 Action Button: :hover --- */
+.btn-action:hover {
+    background-color: var(--colour-forest);
+    color:            var(--colour-cloud);
+    border-color:     var(--colour-forest);
+    box-shadow:       0 4px 14px rgba(45, 106, 79, 0.35);
+}
+
+/* --- 6.7 Action Button: :focus (keyboard accessibility) --- */
+.btn-action:focus {
+    outline:        3px solid var(--colour-forest);
+    outline-offset: 3px;
+}
+
+/* --- 6.8 Action Button: :active (pressed state) --- */
+.btn-action:active {
+    background-color: #1e4d38;
+    color:            var(--colour-cloud);
+    box-shadow:       none;
+}
+
+/* --- 6.9 Form Input: :hover --- */
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+    border-color: var(--colour-sage);
+}
+
+/* --- 6.10 Form Input: :focus — ring and border highlight --- */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color:     var(--colour-forest);
+    box-shadow:       0 0 0 3px rgba(45, 106, 79, 0.18);
+    outline:          none;
+    background-color: var(--colour-cloud);
+}
+
+
+/* --- 7.1 TABLET BREAKPOINT — max-width: 63.9375em (1023px) --- */
+@media screen and (max-width: 63.9375em) {
+
+    /* --- Typography Adjustments for Tablet --- */
+    h1           { font-size: 1.875rem; }   /* 30px */
+    h2           { font-size: 1.5rem;   }   /* 24px */
+    h3           { font-size: 1.25rem;  }   /* 20px */
+    .hero-box h1 { font-size: 2.25rem;  }   /* 36px */
+
+    /* --- Layout Adjustments for Tablet --- */
+    header {
+        padding: var(--space-md) var(--space-lg);
+    }
+
+    main {
+        padding: var(--space-xl) var(--space-lg);
+    }
+
+    /* Card grid reduces from 3 columns to 2 columns on tablet */
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* CTA banner switches to vertical stacking on tablet */
+    .cta-banner {
+        flex-direction: column;
+        text-align:     center;
+    }
+
+    .hero-box {
+        padding: var(--space-2xl) var(--space-lg);
+    }
+}
+
+/* --- 7.2 MOBILE BREAKPOINT — max-width: 47.9375em (767px) --- */
+@media screen and (max-width: 47.9375em) {
+
+    /* --- Typography Adjustments for Mobile --- */
+    h1           { font-size: 1.625rem; }   /* 26px */
+    h2           { font-size: 1.25rem;  }   /* 20px */
+    h3           { font-size: 1.125rem; }   /* 18px */
+    p            { font-size: 0.95rem;  }
+    .hero-box h1 { font-size: 1.625rem; }
+    .hero-box p  { font-size: var(--font-size-base); }
+
+    /* --- Navigation Adjustments for Mobile ---
+         Header stacks logo above navigation links. */
+    header {
+        flex-direction: column;
+        align-items:    center;
+        gap:            var(--space-sm);
+        padding:        var(--space-md);
+    }
+
+    .logo-text {
+        font-size: 1.125rem;
+    }
+
+    /* Navigation links wrap onto multiple lines on small screens */
+    header nav ul {
+        flex-wrap:       wrap;
+        justify-content: center;
+        gap:             0.15rem;
+    }
+
+    header nav ul li a {
+        font-size: 0.8rem;
+        padding:   0.35rem 0.65rem;
+    }
+
+    /* --- Layout Adjustments for Mobile --- */
+    main {
+        padding: var(--space-lg) var(--space-md);
+    }
+
+    /* Card grid collapses to a single column on mobile */
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-box {
+        padding:       var(--space-xl) var(--space-md);
+        border-radius: var(--border-radius-md);
+    }
+
+    .cta-banner {
+        flex-direction: column;
+        text-align:     center;
+        gap:            var(--space-md);
+        padding:        var(--space-lg) var(--space-md);
+    }
+
+    /* Form reduces padding on small screens */
+    #enquiryForm {
+        padding: var(--space-lg) var(--space-md);
+    }
+
+    /* --- Image Adjustments for Mobile --- */
+    .card img,
+    .card video {
+        height: 170px;
+    }
+}
+
+/* --- 7.3 LARGE DESKTOP — min-width: 75em (1200px) --- */
+@media screen and (min-width: 75em) {
+
+    main {
+        padding: var(--space-3xl) var(--space-2xl);
+    }
+
+    .hero-box h1 {
+        font-size: var(--font-size-3xl); /* 46px — larger display at wide viewport */
+    }
+}
