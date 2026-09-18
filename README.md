@@ -5,16 +5,15 @@
 # Rudzani Community Outreach - Website Development
 
 ## 1 Table of Contents
-
-**Project Overview
-**Proposal Summary
-File and Folder Structure
-Technologies Used
-Pages Description
-How to View the Website
-Screenshots
-Changelog
-References
+2.Project Overview
+3.Proposal Summary
+4.Technologies Used
+5.Build With
+6.How To View Website
+7.File and Folder Structure
+8.Screenshots
+7.Changelog
+10.References
 
 ## 2 Project Overview
 
@@ -92,7 +91,7 @@ Git / GitHub	Version control and remote repository hosting
 
 PART 2
 
-## 7 Changelog
+## 8 Changelog
 
 ### [v1.1.0] - Part 2 Layout & Responsive Upgrade
 * **Added:** CSS file and a link all five HTML pages
@@ -122,7 +121,7 @@ PART 2
 * **Fixed:** Added the missing </div> closing tag after the third article, before </main>.
 
 
-## Part 2 Evidence Screenshots
+## 9 Part 2 Evidence Screenshots
 
 ### Desktop View (1024px+)
 ![Desktop Layout](./images/desktop%20screenshot.png)
@@ -131,7 +130,7 @@ PART 2
 ### Mobile View (767px and below)
 ![Mobile Layout](./images/mobile%20screenshot.png)
 
-#### REFERENCES
+#### 10 REFERENCES
 GitHub Docs. (2024). About commits. https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/about-commits
 Google Fonts. (2024). Nunito. https://fonts.google.com/specimen/Nunito
 MDN Web Docs. (2024). Responsive images. Mozilla. https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images
