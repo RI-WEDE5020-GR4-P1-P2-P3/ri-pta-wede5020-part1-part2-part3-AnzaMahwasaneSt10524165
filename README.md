@@ -61,11 +61,11 @@ This project was developed as a Portfolio of Evidence (PoE) submission for the D
 ├── programmes.html
 └── README.md
 
-###PART 1
-* **Added** Added 5 files(index.html, about.html, enquiry.html, programmes.html,contact.html)
-* **Added** Footers and headers
-* **Added** Div classes
-* **Added** images folder
+##PART 1
+* **Added:** Added 5 files(index.html, about.html, enquiry.html, programmes.html,contact.html)
+* **Added:** Footers and headers
+* **Added:** Div classes
+* **Added:** images folder
 
 
 PART 2
@@ -81,18 +81,17 @@ PART 2
 
 * **Added:** Applied a universal box-sizing: border-box reset,reset(margain)and(padding)on all elements,set(scroll-behavior:smooth)on(html) I also applied(display: flex; flex-direction: column; min-height: 100vh)on(body)
 
-* **Added** I add (:hover),(:focus)and(:active)states for navigation links(background colour change),(btn-action) buttonsinversion to forest green on hover, focus ring, pressed darkening on active card elements (raised shadow on hover), and all form inputs (border colour change on hover, focus ring and glow on focus).
+* **Added:** I add (:hover),(:focus)and(:active)states for navigation links(background colour change),(btn-action) buttonsinversion to forest green on hover, focus ring, pressed darkening on active card elements (raised shadow on hover), and all form inputs (border colour change on hover, focus ring and glow on focus).
 
-* **Added**Implemented Flexbox layout for the header (justify-content: space-between, align-items: center) and navigation (flex-wrap, gap). Implemented CSS Grid for the .card-grid (grid-template-columns: repeat(3, 1fr), gap). Used display: flex; flex-direction: column on individual cards and the enquiry form. Hero section uses display: flex; flex-direction: column; align-items: center.
+* **Added:**Implemented Flexbox layout for the header (justify-content: space-between, align-items: center) and navigation (flex-wrap, gap). Implemented CSS Grid for the .card-grid (grid-template-columns: repeat(3, 1fr), gap). Used display: flex; flex-direction: column on individual cards and the enquiry form. Hero section uses display: flex; flex-direction: column; align-items: center.
 
-* **Added** I added Topography style:Imported the Nunito typeface from Google Fonts 
+* **Added:** I added Topography style:Imported the Nunito typeface from Google Fonts 
 
-* **Added** Implemented responsive `@media` query rules to stack page elements cleanly on mobile viewports
-* **Added** type="video/mp4" to all <source> elements.
-
-
-####FIXED
-## 
+* **Added:** Implemented responsive `@media` query rules to stack page elements cleanly on mobile viewports
+* **Added:** type="video/mp4" to all <source> elements.
+**Updated:** Formatted form fields on `enquiry.html` with responsive flex layouts.
+  
+## FIXED
 
 * **Fixed:** Added missing closing `>` bracket on the header navigation in `index.html`.
 * **Fixed:** Corrected image folder paths in `README.md` so evidence screenshots render inline.
