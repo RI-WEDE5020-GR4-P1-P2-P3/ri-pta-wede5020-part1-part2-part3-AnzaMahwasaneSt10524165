@@ -1,0 +1,6 @@
+# robots.txt for Rudzani Community Outreach
+# Tells search engine crawlers which pages they may index.
+User-agent: *
+Allow: /
+
+Sitemap: https://rudzani-community-outreach.netlify.app/sitemap.xml

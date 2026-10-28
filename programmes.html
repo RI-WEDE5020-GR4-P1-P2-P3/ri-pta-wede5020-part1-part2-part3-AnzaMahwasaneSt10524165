@@ -3,56 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programmes - Rudzani Community Outreach</title>
-    <link rel="stylesheet" href="CSS/style.css">
-</head>
-<body>
+    <title>Programmes | Feeding Scheme, Tutoring & Youth Workshops</title>
+    <meta name="description" content="Explore our daily feeding scheme, free after-school tutoring and weekend youth workshops in Thohoyandou, Limpopo. Search the activities and find where you can help.">
+    <meta name="keywords" content="community programmes Limpopo, daily feeding scheme, after-school tutoring Thohoyandou, mathematics tutoring, English literacy tutoring, youth workshops, career guidance Limpopo, leadership skills teenagers">
+    <meta name="author" content="Anza Mahwasane">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#15202b">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <link rel="canonical" href="https://rudzani-community-outreach.netlify.app/programmes.html">
 
+    <!-- Social media (Open Graph and Twitter Card) -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Rudzani Community Outreach">
+    <meta property="og:locale" content="en_ZA">
+    <meta property="og:title" content="Programmes | Feeding Scheme, Tutoring & Youth Workshops">
+    <meta property="og:description" content="Explore our daily feeding scheme, free after-school tutoring and weekend youth workshops in Thohoyandou, Limpopo. Search the activities and find where you can help.">
+    <meta property="og:url" content="https://rudzani-community-outreach.netlify.app/programmes.html">
+    <meta property="og:image" content="https://rudzani-community-outreach.netlify.app/images/rudzani-community-outreach-social-share.jpg">
+    <meta property="og:image:alt" content="Rudzani Community Outreach - empowering youth in Tshisaulu, Thohoyandou">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Programmes | Feeding Scheme, Tutoring & Youth Workshops">
+    <meta name="twitter:description" content="Explore our daily feeding scheme, free after-school tutoring and weekend youth workshops in Thohoyandou, Limpopo. Search the activities and find where you can help.">
+    <meta name="twitter:image" content="https://rudzani-community-outreach.netlify.app/images/rudzani-community-outreach-social-share.jpg">
+
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+    <!-- Google Fonts (preconnect makes the font load faster than @import) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&amp;display=swap">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- JavaScript (defer = the page is shown first, then the scripts run) -->
+    <script src="js/vendor/jquery-3.7.1.min.js" defer></script>
+    <script src="js/data.js" defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body data-page="programmes">
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <!-- Header & Main Navigation -->
     <header>
-        <div class="logo-text">Rudzani Community Outreach</div>
+        <a href="index.html" class="logo">
+            <img src="images/logo.svg" alt="Rudzani Community Outreach logo" width="44" height="44">
+            <span class="logo-text">Rudzani Community Outreach</span>
+        </a>
         <nav aria-label="Main Navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="programmes.html" class="active">Programmes</a></li>
+                <li><a href="programmes.html" class="active" aria-current="page">Programmes</a></li>
                 <li><a href="enquiry.html">Enquiry</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <h1>Our Community Programmes</h1>
-        <p>Explore the core initiatives we run weekly to uplift the youth in Limpopo.</p>
 
-        <div class="card-grid">
-            <article class="card">
-                <video control autoplay muted loop width="1505">
-                    <source src="https://www.pexels.com/download/video/6893775/">
+    <main id="main">
+        <!-- Page banner and breadcrumb (internal linking) -->
+        <section class="page-banner">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li aria-current="page">Programmes</li>
+                    </ol>
+                </nav>
+                <h1>Our Community Programmes</h1>
+                <p>Explore the core initiatives we run weekly to uplift the youth in Limpopo.</p>
+            </div>
+        </section>
 
-                </video>
-                <h2>1. Daily Nutritional Programme</h2>
-                <p>Operating Monday to Friday,we serve balanced hot meals to over 150 local children after school hours,ensuring hunger never hinders their ability to learn</p>
-            </article>
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Our Three Core Programmes</h2>
+                <p>Every week our volunteers run a daily nutrition programme, after-school tutoring and youth empowerment workshops. Press play to watch each one, or <a class="text-link" href="enquiry.html">send an enquiry</a> to get involved.</p>
 
-            <article class="card">
-                <video control autoplay muted loop width="1505">
-                    <source src="https://www.pexels.com/download/video/32778872/">
-                </video>
-                <h2>2. After School Program</h2>
-                <p>Volunteer tutors assist learners from Grades 4 to 12 with homework, examination preparation, and literacy in English and Mathematics.</p>
-            </article>
+                <div class="card-grid">
+                    <article class="card" data-reveal>
+                        <video controls preload="none" playsinline poster="images/volunteers-sorting-food-donations-thumb.webp" width="1280" height="720" aria-label="Volunteers preparing food donations for the daily nutrition programme">
+                            <source src="Videos/daily-nutrition-programme.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <h3>1. Daily Nutritional Programme</h3>
+                        <p>Operating Monday to Friday, we serve balanced hot meals to over 150 local children after school hours, ensuring hunger never hinders their ability to learn.</p>
+                    </article>
 
-            <article class="card">
-                <video control autoplay muted loop width="1505">
-                    <source src="https://www.pexels.com/download/video/7048712/">
-                </video>
-                <h2>3. Youth Empowerment</h2>
-                <p>Held on weekends, these interactive bootcamps cover practical topics such as basic computer usage, career guidance, and leadership skills.</p>
-            </article>
+                    <article class="card" data-reveal>
+                        <video controls preload="none" playsinline poster="images/classroom-learners-after-school-programme-thumb.webp" width="1280" height="720" aria-label="Learners in a classroom during the after-school programme">
+                            <source src="Videos/after-school-programme.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <h3>2. After School Programme</h3>
+                        <p>Volunteer tutors assist learners from Grades 4 to 12 with homework, examination preparation, and literacy in English and Mathematics.</p>
+                    </article>
+
+                    <article class="card" data-reveal>
+                        <video controls preload="none" playsinline poster="images/youth-empowerment-hands-globe-illustration-thumb.webp" width="1280" height="720" aria-label="Paper hands reaching toward a globe for the youth empowerment programme">
+                            <source src="Videos/youth-empowerment-workshop.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <h3>3. Youth Empowerment</h3>
+                        <p>Held on weekends, these interactive bootcamps cover practical topics such as basic computer usage, career guidance, and leadership skills.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic content: the list below is built by script.js from js/data.js -->
+        <section class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Find an Activity</h2>
+                <p>Search our weekly activities, filter them by programme and sort the results.</p>
+
+                <form class="filter-bar" id="filterForm" role="search" aria-label="Search and filter activities">
+                    <div class="form-group">
+                        <label for="searchInput">Search</label>
+                        <input type="search" id="searchInput" name="search" placeholder="e.g. maths, meals, leadership" maxlength="60" autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label for="categoryFilter">Programme</label>
+                        <select id="categoryFilter" name="category">
+                            <option value="all">All programmes</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="sortSelect">Sort by</label>
+                        <select id="sortSelect" name="sort">
+                            <option value="name-asc">Name (A to Z)</option>
+                            <option value="name-desc">Name (Z to A)</option>
+                            <option value="category">Programme</option>
+                            <option value="spots-desc">Most volunteer spots</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn-outline" id="resetFilters">Reset</button>
+                </form>
+
+                <p class="results-count" id="resultsCount" aria-live="polite">Loading activities...</p>
+                <div class="card-grid" id="programmeList"></div>
+                <p class="no-results" id="noResults" hidden>No activities match your search. Try a different word or choose "All programmes".</p>
+                <div class="load-more-wrap">
+                    <button type="button" class="btn-action" id="loadMoreBtn" hidden>Load more activities</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="cta-banner" data-reveal>
+                <p>Would you like to help with one of these activities?</p>
+                <a href="enquiry.html" class="btn-action">Volunteer or Sponsor</a>
+            </div>
+        </div>
     </main>
 
+    <!-- Footer Landmark -->
     <footer>
-        <p>&copy; 2026 Rudzani Community Outreach (NPO). Registered Non-Profit Organisation in South Africa.</p>
+        <div class="footer-grid">
+            <div>
+                <p class="footer-heading">Rudzani Community Outreach</p>
+                <p>A registered non-profit organisation in Tshisaulu, Thohoyandou, Limpopo, providing daily nutrition, after-school tutoring and youth workshops.</p>
+            </div>
+            <div>
+                <p class="footer-heading">Quick Links</p>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programmes.html">Programmes</a></li>
+                    <li><a href="enquiry.html">Volunteer or Donate</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="footer-heading">Get in Touch</p>
+                <ul>
+                    <li><a href="mailto:info@rudzanioutreach.org.za">info@rudzanioutreach.org.za</a></li>
+                    <li>Tshisaulu, Thohoyandou, Limpopo</li>
+                    <li><a href="https://www.instagram.com/rudzani_coutrich34/" target="_blank" rel="noopener noreferrer">Instagram: rudzani_coutrich34</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="footer-bottom">&copy; 2026 Rudzani Community Outreach (NPO). Registered Non-Profit Organisation in South Africa.</p>
     </footer>
 
 </body>

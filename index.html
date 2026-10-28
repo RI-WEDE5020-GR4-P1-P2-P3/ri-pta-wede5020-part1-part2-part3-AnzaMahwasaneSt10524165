@@ -3,17 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Rudzani Community Outreach</title>
-    <link rel="stylesheet" href="CSS/style.css">
+    <title>Rudzani Community Outreach | Youth Empowerment in Limpopo</title>
+    <meta name="description" content="Rudzani Community Outreach is a registered NPO in Tshisaulu, Thohoyandou, Limpopo. We provide daily meals, free after-school tutoring and youth workshops. Volunteer or donate today.">
+    <meta name="keywords" content="Rudzani Community Outreach, NPO Limpopo, non-profit Thohoyandou, youth empowerment Limpopo, daily nutrition programme, after-school tutoring Tshisaulu, volunteer Thohoyandou, donate to a childrens charity">
+    <meta name="author" content="Anza Mahwasane">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#15202b">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <link rel="canonical" href="https://rudzani-community-outreach.netlify.app/index.html">
+
+    <!-- Social media -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Rudzani Community Outreach">
+    <meta property="og:locale" content="en_ZA">
+    <meta property="og:title" content="Rudzani Community Outreach | Youth Empowerment in Limpopo">
+    <meta property="og:description" content="Rudzani Community Outreach is a registered NPO in Tshisaulu, Thohoyandou, Limpopo. We provide daily meals, free after-school tutoring and youth workshops. Volunteer or donate today.">
+    <meta property="og:url" content="https://rudzani-community-outreach.netlify.app/index.html">
+    <meta property="og:image" content="https://rudzani-community-outreach.netlify.app/images/rudzani-community-outreach-social-share.jpg">
+    <meta property="og:image:alt" content="Rudzani Community Outreach - empowering youth in Tshisaulu, Thohoyandou">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rudzani Community Outreach | Youth Empowerment in Limpopo">
+    <meta name="twitter:description" content="Rudzani Community Outreach is a registered NPO in Tshisaulu, Thohoyandou, Limpopo. We provide daily meals, free after-school tutoring and youth workshops. Volunteer or donate today.">
+    <meta name="twitter:image" content="https://rudzani-community-outreach.netlify.app/images/rudzani-community-outreach-social-share.jpg">
+
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+    <!-- Google Fonts (preconnect makes the font load faster than @import) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&amp;display=swap">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Structured data for search engines (SEO) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "NGO",
+        "name": "Rudzani Community Outreach",
+        "url": "https://rudzani-community-outreach.netlify.app/",
+        "logo": "https://rudzani-community-outreach.netlify.app/images/logo.svg",
+        "description": "A registered non-profit organisation in Tshisaulu, Thohoyandou, Limpopo providing daily nutrition, after-school tutoring and youth workshops.",
+        "foundingDate": "2018",
+        "email": "info@rudzanioutreach.org.za",
+        "sameAs": ["https://www.instagram.com/rudzani_coutrich34/"],
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Main Road, Tshisaulu",
+            "addressLocality": "Thohoyandou",
+            "addressRegion": "Limpopo",
+            "addressCountry": "ZA"
+        }
+    }
+    </script>
+
+    <!-- JavaScript -->
+    <script src="js/vendor/jquery-3.7.1.min.js" defer></script>
+    <script src="js/data.js" defer></script>
+    <script src="js/script.js" defer></script>
 </head>
-<body>
+<body data-page="index">
+    <a class="skip-link" href="#main">Skip to main content</a>
 
     <!-- Header & Main Navigation -->
     <header>
-        <div class="logo-text">Rudzani Community Outreach</div>
+        <a href="index.html" class="logo">
+            <img src="images/logo.svg" alt="Rudzani Community Outreach logo" width="44" height="44">
+            <span class="logo-text">Rudzani Community Outreach</span>
+        </a>
         <nav aria-label="Main Navigation">
             <ul>
-                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="programmes.html">Programmes</a></li>
                 <li><a href="enquiry.html">Enquiry</a></li>
@@ -23,47 +81,145 @@
     </header>
 
     <!-- Main Page Content -->
-    <main>
-        <section class="hero-box">
-            <h1>Empowering Youth in Tshisaulu, Thohoyandou</h1>
-            <p>Providing daily nutrition, after-school tutoring, and life-skills workshops for local children.</p>
-            <a href="enquiry.html" class="btn-action">Get Involved / Donate</a>
+    <main id="main">
+
+        <!-- Hero: full-width band with text and a photo side by side -->
+        <section class="hero">
+            <div class="container hero-inner">
+                <div class="hero-text">
+                    <h1>Empowering Youth in Tshisaulu, Thohoyandou</h1>
+                    <p>Providing daily nutrition, after-school tutoring, and life-skills workshops for local children across Limpopo.</p>
+                    <div class="hero-actions">
+                        <a href="enquiry.html" class="btn-action">Get Involved / Donate</a>
+                        <a href="programmes.html" class="btn-outline btn-outline-light">View Our Programmes</a>
+                    </div>
+                </div>
+                <div class="hero-media">
+                    <img src="images/children-smiling-daily-nutrition.webp" alt="Smiling children who receive daily meals from Rudzani Community Outreach in Limpopo" width="624" height="420">
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h2>Welcome to Our Community Project</h2>
-            <p>Rudzani Community Outreach is a registered non-profit organisation founded in 2018 in Limpopo. Our vision is to ensure every child has an equal opportunity to thrive through proper nutrition, educational support, and skill development.</p>
-        </section>
-        <section class="card-grid">
-            <article class="card">
-                <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=500" alt="Children receiving meals">
-                <h3>Daily Nutrition</h3>
-                <p>We serve daily nutritious meals to children from low-income households to ensure they can focus on their education.</p>
-            </article>
-
-            <article class="card">
-                <img src="https://images.pexels.com/photos/18506743/pexels-photo-18506743.jpeg" alt="teacher teaching ">
-                <h3>After-School Tutoring</h3>
-                <p>Free academic tutoring in foundational subjects like Mathematics, English, and Science for primary and high school learners.</p>
-            </article>
-
-            <article class="card">
-                <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=500" alt="Youth participating in a team workshop">
-                <h3>Youth Workshops</h3>
-                <p>Practical workshops teaching digital literacy, personal growth, and leadership skills for teenagers.</p>
-            </article>
+        <!-- Impact numbers (animated counters in script.js) -->
+        <section class="stats-band" aria-label="Our impact in numbers">
+            <div class="container stats-grid">
+                <div class="stat">
+                    <span class="stat-number" data-count="150" data-suffix="+">150+</span>
+                    <span class="stat-label">Children fed after school</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="3">3</span>
+                    <span class="stat-label">Core community programmes</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="5">5</span>
+                    <span class="stat-label">Days a week, Monday to Friday</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-since="2018">8</span>
+                    <span class="stat-label">Years serving Tshisaulu</span>
+                </div>
+            </div>
         </section>
 
-        <div class="cta-banner">
-            <p>Help us expand our reach in Limpopo! We need volunteers and corporate partners.</p>
-            <a href="enquiry.html" class="btn-action">Become a Volunteer or Sponsor</a>
+        <section class="section">
+            <div class="container" data-reveal>
+                <h2 class="section-title">Welcome to Our Community Project</h2>
+                <p>Rudzani Community Outreach is a registered non-profit organisation (NPO) founded in 2018 in Limpopo. Our vision is to ensure every child has an equal opportunity to thrive through proper nutrition, educational support, and skill development.</p>
+                <p>Learn more <a class="text-link" href="about.html">about our mission and vision</a>, explore our <a class="text-link" href="programmes.html">community programmes</a>, or <a class="text-link" href="enquiry.html">volunteer or become a sponsor</a> today.</p>
+            </div>
+        </section>
+
+        <section class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">What We Do</h2>
+                <div class="card-grid">
+                    <article class="card" data-reveal>
+                        <img src="images/children-smiling-daily-nutrition-thumb.webp" alt="Children receiving meals from our daily nutrition programme in Tshisaulu" width="600" height="404" loading="lazy" decoding="async">
+                        <h3>Daily Nutrition</h3>
+                        <p>We serve daily nutritious meals to children from low-income households to ensure they can focus on their education.</p>
+                        <button type="button" class="btn-outline" data-modal="nutrition">Quick view</button>
+                    </article>
+
+                    <article class="card" data-reveal>
+                        <img src="images/after-school-tutoring-classroom-thumb.webp" alt="Teacher teaching learners during after-school tutoring" width="600" height="403" loading="lazy" decoding="async">
+                        <h3>After-School Tutoring</h3>
+                        <p>Free academic tutoring in foundational subjects like Mathematics, English, and Science for primary and high school learners.</p>
+                        <button type="button" class="btn-outline" data-modal="tutoring">Quick view</button>
+                    </article>
+
+                    <article class="card" data-reveal>
+                        <img src="images/youth-empowerment-friends-workshop-thumb.webp" alt="Youth participating in a team workshop for young leaders" width="600" height="336" loading="lazy" decoding="async">
+                        <h3>Youth Workshops</h3>
+                        <p>Practical workshops teaching digital literacy, personal growth, and leadership skills for teenagers.</p>
+                        <button type="button" class="btn-outline" data-modal="workshops">Quick view</button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container video-feature" data-reveal>
+                <div class="video-feature-text">
+                    <h2 class="section-title">See Our Work in Action</h2>
+                    <p>Our volunteers give learners in Tshisaulu the support they need to study, grow and succeed. Press play to see how learning support looks in practice.</p>
+                    <a class="text-link" href="programmes.html">Explore all programmes</a>
+                </div>
+                <video controls preload="none" playsinline poster="images/students-studying-together-learning-support-thumb.webp" width="1280" height="720" aria-label="Students studying together with the help of volunteer tutors">
+                    <source src="Videos/learning-support-tutoring.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="cta-banner" data-reveal>
+                <p>Help us expand our reach in Limpopo! We need volunteers and corporate partners.</p>
+                <a href="enquiry.html" class="btn-action">Become a Volunteer or Sponsor</a>
+            </div>
         </div>
     </main>
 
+    <!-- Quick view modal (content is filled in by script.js) -->
+    <div class="modal" id="quickViewModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+        <div class="modal-box">
+            <button type="button" class="modal-close" aria-label="Close quick view">&times;</button>
+            <img id="modalImage" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBTAA7" alt="" width="600" height="400">
+            <div class="modal-body">
+                <h2 id="modalTitle"></h2>
+                <p id="modalText"></p>
+                <a id="modalLink" class="btn-action" href="#"></a>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer Landmark -->
     <footer>
-        <p>&copy; 2026 Rudzani Community Outreach (NPO). Registered Non-Profit Organisation in South Africa.</p>
-        <p>Email: info@rudzanioutreach.org.za | Tshisaulu, Thohoyandou, Limpopo</p>
+        <div class="footer-grid">
+            <div>
+                <p class="footer-heading">Rudzani Community Outreach</p>
+                <p>A registered non-profit organisation in Tshisaulu, Thohoyandou, Limpopo, providing daily nutrition, after-school tutoring and youth workshops.</p>
+            </div>
+            <div>
+                <p class="footer-heading">Quick Links</p>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programmes.html">Programmes</a></li>
+                    <li><a href="enquiry.html">Volunteer or Donate</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="footer-heading">Get in Touch</p>
+                <ul>
+                    <li><a href="mailto:info@rudzanioutreach.org.za">info@rudzanioutreach.org.za</a></li>
+                    <li>Tshisaulu, Thohoyandou, Limpopo</li>
+                    <li><a href="https://www.instagram.com/rudzani_coutrich34/" target="_blank" rel="noopener noreferrer">Instagram: rudzani_coutrich34</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="footer-bottom">&copy; 2026 Rudzani Community Outreach (NPO). Registered Non-Profit Organisation in South Africa.</p>
     </footer>
 
 </body>

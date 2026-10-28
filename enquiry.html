@@ -3,61 +3,257 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enquiry - Rudzani Community Outreach</title>
+    <title>Volunteer or Donate | Enquiry Form | Rudzani Outreach</title>
+    <meta name="description" content="Volunteer, sponsor or ask a question. Complete our enquiry form to see volunteer spots, sponsorship costs and how to support children in Thohoyandou, Limpopo.">
+    <meta name="keywords" content="volunteer sign up Limpopo, sponsor a child Thohoyandou, donor enquiry form, become a volunteer tutor, NPO donation enquiry Tshisaulu">
+    <meta name="author" content="Anza Mahwasane">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#15202b">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <link rel="canonical" href="https://rudzani-community-outreach.netlify.app/enquiry.html">
+
+    <!-- Social media  -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Rudzani Community Outreach">
+    <meta property="og:locale" content="en_ZA">
+    <meta property="og:title" content="Volunteer or Donate | Enquiry Form | Rudzani Outreach">
+    <meta property="og:description" content="Volunteer, sponsor or ask a question. Complete our enquiry form to see volunteer spots, sponsorship costs and how to support children in Thohoyandou, Limpopo.">
+    <meta property="og:url" content="https://rudzani-community-outreach.netlify.app/enquiry.html">
+    <meta property="og:image" content="https://rudzani-community-outreach.netlify.app/images/rudzani-community-outreach-social-share.jpg">
+    <meta property="og:image:alt" content="Rudzani Community Outreach - empowering youth in Tshisaulu, Thohoyandou">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Volunteer or Donate | Enquiry Form | Rudzani Outreach">
+    <meta name="twitter:description" content="Volunteer, sponsor or ask a question. Complete our enquiry form to see volunteer spots, sponsorship costs and how to support children in Thohoyandou, Limpopo.">
+    <meta name="twitter:image" content="https://rudzani-community-outreach.netlify.app/images/rudzani-community-outreach-social-share.jpg">
+
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+    <!-- Google Fonts (preconnect makes the font load faster than @import) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&amp;display=swap">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- JavaScript (defer = the page is shown first, then the scripts run) -->
+    <script src="js/vendor/jquery-3.7.1.min.js" defer></script>
+    <script src="js/data.js" defer></script>
     <script src="js/script.js" defer></script>
-      <link rel="stylesheet" href="CSS/style.css">
 </head>
-<body>
+<body data-page="enquiry">
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <!-- Header & Main Navigation -->
     <header>
-        <div class="logo-text">Rudzani Community Outreach</div>
+        <a href="index.html" class="logo">
+            <img src="images/logo.svg" alt="Rudzani Community Outreach logo" width="44" height="44">
+            <span class="logo-text">Rudzani Community Outreach</span>
+        </a>
         <nav aria-label="Main Navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="programmes.html">Programmes</a></li>
-                <li><a href="enquiry.html" class="active">Enquiry</a></li>
+                <li><a href="enquiry.html" class="active" aria-current="page">Enquiry</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <h1>Volunteer or Donor Enquiry Form</h1>
-        <p>Please complete the structured form below if you would like to sign up as a volunteer or enquire about becoming an official donor/sponsor.</p>
 
-        <br>
+    <main id="main">
+        <!-- Page banner and breadcrumb (internal linking) -->
+        <section class="page-banner">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li aria-current="page">Enquiry</li>
+                    </ol>
+                </nav>
+                <h1>Volunteer or Donor Enquiry Form</h1>
+                <p>Please complete the structured form below if you would like to sign up as a volunteer or enquire about becoming an official donor/sponsor.</p>
+            </div>
+        </section>
 
-        <form id="enquiryForm" onsubmit="return validateEnquiryForm(event)">
+        <section class="section">
+            <div class="container form-layout">
+
+                <div>
+                    <form id="enquiryForm" name="enquiry" method="POST" data-netlify="true">
+                        <h2>Enquiry Details</h2>
+                        <p class="form-note">Fields marked with * are required.</p>
+
+                        
+                        <input type="hidden" name="form-name" value="enquiry">
+
+                        <p class="honeypot" aria-hidden="true">
+                            <label>Leave this field empty: <input type="text" name="bot-field" tabindex="-1" autocomplete="off"></label>
+                        </p>
+
             <div class="form-group">
                 <label for="fullName">Full Name *</label>
-                <input type="text" id="fullName" placeholder="e.g. Tendani Ndou">
+                <input type="text" id="fullName" name="fullName" placeholder="e.g. Tendani Ndou" required minlength="2" maxlength="60" pattern="[A-Za-z\u00C0-\u024F' \-]{2,60}" autocomplete="name" aria-describedby="fullName-error">
+                <p class="error-message" id="fullName-error" aria-live="polite"></p>
             </div>
-
             <div class="form-group">
                 <label for="emailAddress">Email Address *</label>
-                <input type="email" id="emailAddress" placeholder="e.g. tendani@example.com">
+                <input type="email" id="emailAddress" name="emailAddress" placeholder="e.g. tendani@example.com" required maxlength="100" autocomplete="email" aria-describedby="emailAddress-error">
+                <p class="error-message" id="emailAddress-error" aria-live="polite"></p>
             </div>
-
+            <div class="form-group">
+                <label for="phoneNumber">Phone Number (optional)</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="e.g. 082 123 4567" maxlength="16" pattern="(\+27|0)[0-9 ]{9,13}" autocomplete="tel" inputmode="tel" aria-describedby="phoneNumber-hint phoneNumber-error">
+                <small class="field-hint" id="phoneNumber-hint">South African format, for example 082 123 4567 or +27 82 123 4567.</small>
+                <p class="error-message" id="phoneNumber-error" aria-live="polite"></p>
+            </div>
             <div class="form-group">
                 <label for="enquiryType">Enquiry Type *</label>
-                <select id="enquiryType">
+                <select id="enquiryType" name="enquiryType" required aria-describedby="enquiryType-error">
                     <option value="">-- Select Option --</option>
                     <option value="Volunteer Sign-Up">Volunteer Sign-Up</option>
                     <option value="Donor / Sponsor Enquiry">Donor / Sponsor Enquiry</option>
                     <option value="General Information">General Information</option>
                 </select>
+                <p class="error-message" id="enquiryType-error" aria-live="polite"></p>
             </div>
+
+                        <!-- Shown only when "Volunteer Sign-Up" is selected -->
+                        <fieldset class="conditional" id="volunteerFields" hidden disabled>
+                            <legend>Volunteer details</legend>
+
+            <div class="form-group">
+                <label for="programmeChoice">Activity you would like to help with *</label>
+                <select id="programmeChoice" name="programmeChoice" required aria-describedby="programmeChoice-error"><option value="">-- Select an activity --</option></select>
+                <p class="error-message" id="programmeChoice-error" aria-live="polite"></p>
+            </div>
+                            <div class="form-group">
+                                <span class="group-label" id="daysLabel">Days you are available *</span>
+                                <div class="checkbox-row" role="group" aria-labelledby="daysLabel">
+                                    <label class="checkbox-label"><input type="checkbox" name="availableDays" value="Weekdays after school"> Weekdays after school</label>
+                                    <label class="checkbox-label"><input type="checkbox" name="availableDays" value="Weekends"> Weekends</label>
+                                </div>
+                                <p class="error-message" id="availableDays-error" aria-live="polite"></p>
+                            </div>
+
+            <div class="form-group">
+                <label for="startDate">Preferred start date *</label>
+                <input type="date" id="startDate" name="startDate" required aria-describedby="startDate-error">
+                <p class="error-message" id="startDate-error" aria-live="polite"></p>
+            </div>
+                            <div class="form-group">
+                                <label class="checkbox-label"><input type="checkbox" id="ageConfirm" name="ageConfirm" value="Yes" required> I am 18 years or older *</label>
+                                <p class="error-message" id="ageConfirm-error" aria-live="polite"></p>
+                            </div>
+                        </fieldset>
+
+                        <!-- Shown only when "Donor / Sponsor Enquiry" is selected -->
+                        <fieldset class="conditional" id="sponsorFields" hidden disabled>
+                            <legend>Sponsorship details</legend>
+
+            <div class="form-group">
+                <label for="sponsorFocus">What would you like to sponsor? *</label>
+                <select id="sponsorFocus" name="sponsorFocus" required aria-describedby="sponsorFocus-error"><option value="">-- Select a focus area --</option></select>
+                <p class="error-message" id="sponsorFocus-error" aria-live="polite"></p>
+            </div>
+            <div class="form-group">
+                <label for="childrenCount">Number of children to support *</label>
+                <input type="number" id="childrenCount" name="childrenCount" min="1" max="150" step="1" placeholder="e.g. 10" required aria-describedby="childrenCount-error">
+                <p class="error-message" id="childrenCount-error" aria-live="polite"></p>
+            </div>
+            <div class="form-group">
+                <label for="monthsCount">Number of months *</label>
+                <input type="number" id="monthsCount" name="monthsCount" min="1" max="12" step="1" placeholder="e.g. 6" required aria-describedby="monthsCount-error">
+                <p class="error-message" id="monthsCount-error" aria-live="polite"></p>
+            </div>
+                        </fieldset>
 
             <div class="form-group">
                 <label for="messageText">Message / Details *</label>
-                <textarea id="messageText" rows="5" placeholder="How would you like to assist or collaborate with us?"></textarea>
+                <textarea id="messageText" name="messageText" rows="5" placeholder="How would you like to assist or collaborate with us?" required minlength="20" maxlength="500" aria-describedby="messageText-counter messageText-error"></textarea>
+                <small class="field-hint" id="messageText-counter">0 / 500 characters (minimum 20)</small>
+                <p class="error-message" id="messageText-error" aria-live="polite"></p>
             </div>
 
-            <button type="submit" class="btn-action">Submit Enquiry</button>
-        </form>
+                        <div class="form-group">
+                            <label class="checkbox-label"><input type="checkbox" id="consent" name="consent" value="Yes" required> I agree that Rudzani Community Outreach may use my details to reply to this enquiry. *</label>
+                            <p class="error-message" id="consent-error" aria-live="polite"></p>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn-action" id="enquirySubmit">Submit Enquiry</button>
+                            <button type="reset" class="btn-outline" id="enquiryReset">Clear Form</button>
+                        </div>
+                    </form>
+
+                    <!-- Response shown after the form is validated and processed -->
+                    <section class="response-panel" id="enquiryResponse" tabindex="-1" aria-live="polite" hidden>
+                        <h2 id="responseTitle"></h2>
+                        <div id="responseBody"></div>
+                        <p class="response-status" id="responseStatus"></p>
+                        <button type="button" class="btn-outline" id="newEnquiryBtn">Send another enquiry</button>
+                    </section>
+                </div>
+
+                <!-- Accordion (jQuery in script.js) -->
+                <aside class="faq" aria-labelledby="faqHeading">
+                    <h2 id="faqHeading">Frequently Asked Questions</h2>
+                    <div class="accordion" id="faqAccordion">
+                        <h3 class="accordion-heading"><button type="button" class="accordion-trigger" id="faq-trigger-1" aria-expanded="false" aria-controls="faq-panel-1">Who can volunteer?</button></h3>
+                        <div class="accordion-panel" id="faq-panel-1" role="region" aria-labelledby="faq-trigger-1">
+                            <p>Student volunteers from local universities and colleges and community members who are 18 or older can help as tutors, meal helpers or workshop assistants.</p>
+                        </div>
+
+                        <h3 class="accordion-heading"><button type="button" class="accordion-trigger" id="faq-trigger-2" aria-expanded="false" aria-controls="faq-panel-2">Do I need teaching experience to tutor?</button></h3>
+                        <div class="accordion-panel" id="faq-panel-2" role="region" aria-labelledby="faq-trigger-2">
+                            <p>No. We look for patient and reliable people who are comfortable with the subject they want to help with, such as Mathematics, English or Science.</p>
+                        </div>
+
+                        <h3 class="accordion-heading"><button type="button" class="accordion-trigger" id="faq-trigger-3" aria-expanded="false" aria-controls="faq-panel-3">How is sponsorship money used?</button></h3>
+                        <div class="accordion-panel" id="faq-panel-3" role="region" aria-labelledby="faq-trigger-3">
+                            <p>Sponsorships support daily hot meals, tutoring materials and weekend workshops. The cost estimate shown after you submit the form explains what your support could cover.</p>
+                        </div>
+
+                        <h3 class="accordion-heading"><button type="button" class="accordion-trigger" id="faq-trigger-4" aria-expanded="false" aria-controls="faq-panel-4">When is the organisation open?</button></h3>
+                        <div class="accordion-panel" id="faq-panel-4" role="region" aria-labelledby="faq-trigger-4">
+                            <p>Monday to Friday from 08:00 to 20:00 and Saturday from 09:00 to 17:00. Visit our <a class="text-link" href="contact.html">contact page</a> for the address and map.</p>
+                        </div>
+
+                        <h3 class="accordion-heading"><button type="button" class="accordion-trigger" id="faq-trigger-5" aria-expanded="false" aria-controls="faq-panel-5">What happens after I submit the form?</button></h3>
+                        <div class="accordion-panel" id="faq-panel-5" role="region" aria-labelledby="faq-trigger-5">
+                            <p>You will see a response on the screen straight away, such as available volunteer spots or a cost estimate. Our team will then follow up using the email address you provided.</p>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
     </main>
 
+    <!-- Footer Landmark -->
     <footer>
-        <p>&copy; 2026 Rudzani Community Outreach (NPO). Registered Non-Profit Organisation in South Africa.</p>
+        <div class="footer-grid">
+            <div>
+                <p class="footer-heading">Rudzani Community Outreach</p>
+                <p>A registered non-profit organisation in Tshisaulu, Thohoyandou, Limpopo, providing daily nutrition, after-school tutoring and youth workshops.</p>
+            </div>
+            <div>
+                <p class="footer-heading">Quick Links</p>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programmes.html">Programmes</a></li>
+                    <li><a href="enquiry.html">Volunteer or Donate</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="footer-heading">Get in Touch</p>
+                <ul>
+                    <li><a href="mailto:info@rudzanioutreach.org.za">info@rudzanioutreach.org.za</a></li>
+                    <li>Tshisaulu, Thohoyandou, Limpopo</li>
+                    <li><a href="https://www.instagram.com/rudzani_coutrich34/" target="_blank" rel="noopener noreferrer">Instagram: rudzani_coutrich34</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="footer-bottom">&copy; 2026 Rudzani Community Outreach (NPO). Registered Non-Profit Organisation in South Africa.</p>
     </footer>
 
 </body>
