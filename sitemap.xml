@@ -2,27 +2,27 @@
 <!-- sitemap.xml for Rudzani Community Outreach - lists every page so search engines can find them -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://rudzani-community-outreach.netlify.app/</loc>
+        <loc>https://rudanicommunityoutreach.netlify.app/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://rudzani-community-outreach.netlify.app/about.html</loc>
+        <loc>https://rudanicommunityoutreach.netlify.app/about.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://rudzani-community-outreach.netlify.app/programmes.html</loc>
+        <loc>https://rudanicommunityoutreach.netlify.app/programmes.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://rudzani-community-outreach.netlify.app/enquiry.html</loc>
+        <loc>https://rudanicommunityoutreach.netlify.app/enquiry.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://rudzani-community-outreach.netlify.app/contact.html</loc>
+        <loc>https://rudanicommunityoutreach.netlify.app/contact.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
