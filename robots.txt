@@ -3,4 +3,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://rudzani-community-outreach.netlify.app/sitemap.xml
+Sitemap: https://rudanicommunityoutreach.netlify.app/sitemap.xml
