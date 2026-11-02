@@ -1,18 +1,5 @@
 /* ==========================================================================
    Rudzani Community Outreach - script.js (Part 3)
-
-   Contents
-   1.  Settings and small helper functions
-   2.  Scroll reveal animation, back-to-top button and animated counters
-   3.  Quick view modal (index.html)
-   4.  Tabs and accordion with jQuery (about.html, enquiry.html)
-   5.  Gallery with lightbox (about.html)
-   6.  Dynamic programme list: search, filter, sort, load more (programmes.html)
-   7.  Form validation engine (enquiry.html and contact.html)
-   8.  Enquiry form: processing, response and AJAX submission (enquiry.html)
-   9.  Contact form: compile an email (contact.html)
-   10. Interactive map with Leaflet (contact.html)
-   11. Start-up
    ========================================================================== */
 
 "use strict";
