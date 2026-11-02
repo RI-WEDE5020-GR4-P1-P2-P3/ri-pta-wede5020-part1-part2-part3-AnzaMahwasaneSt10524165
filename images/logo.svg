@@ -1,17 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="logoTitle">
   <title id="logoTitle">Rudzani Community Outreach logo</title>
-  <circle cx="32" cy="32" r="30" fill="#2d6a4f"/>
-  <circle cx="32" cy="32" r="30" fill="none" stroke="#52b788" stroke-width="2"/>
-  <!-- rising sun -->
-  <g stroke="#f5b942" stroke-width="3" stroke-linecap="round">
-    <line x1="32" y1="8" x2="32" y2="13"/>
-    <line x1="17" y1="14" x2="20.5" y2="17.5"/>
-    <line x1="47" y1="14" x2="43.5" y2="17.5"/>
-    <line x1="9" y1="27" x2="14" y2="27"/>
-    <line x1="55" y1="27" x2="50" y2="27"/>
+  <circle cx="32" cy="32" r="30" fill="#15202b"/>
+  <circle cx="32" cy="32" r="30" fill="none" stroke="#3a4a5c" stroke-width="2"/>
+  <!-- baobab trunk -->
+  <path d="M27,54 C26,42 28,30 32,26 C36,30 38,42 37,54 Z" fill="#f5b942"/>
+  <!-- bare upper branches, the baobab's "upside-down tree" silhouette -->
+  <g stroke="#f5b942" stroke-width="2.5" stroke-linecap="round">
+    <line x1="32" y1="26" x2="18" y2="12"/>
+    <line x1="32" y1="26" x2="25" y2="8"/>
+    <line x1="32" y1="26" x2="32" y2="6"/>
+    <line x1="32" y1="26" x2="39" y2="8"/>
+    <line x1="32" y1="26" x2="46" y2="12"/>
   </g>
-  <circle cx="32" cy="27" r="11" fill="#f5b942"/>
-  <!-- cupped hands holding a heart -->
-  <path d="M32 47 C22 40 20 33 25.5 31 C28.5 30 31 31.8 32 34 C33 31.8 35.5 30 38.5 31 C44 33 42 40 32 47 Z" fill="#ffffff"/>
-  <path d="M10 42 C16 48 24 54 32 54 C40 54 48 48 54 42 C49 45 41 49 32 49 C23 49 15 45 10 42 Z" fill="#cde3d9"/>
+  <!-- canopy clusters at each branch tip -->
+  <g fill="#ffffff">
+    <circle cx="18" cy="12" r="2.8"/>
+    <circle cx="25" cy="8" r="2.8"/>
+    <circle cx="32" cy="6" r="2.8"/>
+    <circle cx="39" cy="8" r="2.8"/>
+    <circle cx="46" cy="12" r="2.8"/>
+  </g>
 </svg>

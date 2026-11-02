@@ -17,27 +17,15 @@
 
 "use strict";
 
-/* ==========================================================================
-   1. SETTINGS AND HELPER FUNCTIONS
-   ========================================================================== */
 
-/* The email address that receives the messages from the contact form.
-   It comes from js/data.js, so it only has to be changed in one place. */
 const RECIPIENT_EMAIL = (typeof organisation !== "undefined") ? organisation.email : "info@rudzanioutreach.org.za";
 
-/* Number of programme cards shown at one time before "Load more" is pressed */
 const PAGE_SIZE = 6;
-
-/* Users who prefer less motion do not get animations */
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-/* Shortcut for document.getElementById */
 function byId(id) {
     return document.getElementById(id);
 }
 
-/* Creates an element, adds a class and text. textContent is used (not innerHTML)
-   so text typed by a visitor can never run as HTML (protects against XSS attacks). */
 function makeElement(tag, className, text) {
     const element = document.createElement(tag);
     if (className) {
@@ -53,15 +41,11 @@ function makeElement(tag, className, text) {
 function formatRand(amount) {
     return "R " + amount.toLocaleString("en-ZA");
 }
-
-/* Returns today's date as YYYY-MM-DD using the visitor's local time */
 function toDateString(date) {
     const month = String(date.getMonth() + 1).padStart(2, "0");
     const day = String(date.getDate()).padStart(2, "0");
     return date.getFullYear() + "-" + month + "-" + day;
 }
-
-/* Keeps focus inside a dialog while it is open (keyboard accessibility) */
 function trapFocus(event, container) {
     if (event.key !== "Tab") {
         return;
@@ -80,14 +64,6 @@ function trapFocus(event, container) {
         first.focus();
     }
 }
-
-
-/* ==========================================================================
-   2. SCROLL REVEAL, BACK-TO-TOP BUTTON AND ANIMATED COUNTERS
-   ========================================================================== */
-
-/* Elements marked with data-reveal fade in when they scroll into view.
-   Elements that are already on the screen are left alone so nothing flickers. */
 function initReveal() {
     const items = document.querySelectorAll("[data-reveal]");
     if (items.length === 0 || prefersReducedMotion || !("IntersectionObserver" in window)) {
@@ -103,8 +79,6 @@ function initReveal() {
             element.classList.add("is-visible");
             obs.unobserve(element);
 
-            /* When the fade is finished the helper classes are removed, so the
-               normal card hover effect works again. */
             element.addEventListener("transitionend", function done(event) {
                 if (event.propertyName !== "opacity") {
                     return;
@@ -125,8 +99,6 @@ function initReveal() {
         }
     });
 }
-
-/* Creates a round "back to top" button and shows it after the visitor scrolls down */
 function initBackToTop() {
     const button = makeElement("button", "back-to-top", "\u2191");
     button.type = "button";
@@ -150,9 +122,6 @@ function initBackToTop() {
     });
 }
 
-/* Counts the impact numbers up from 0 when they scroll into view.
-   data-count = target number, data-suffix = text after the number (e.g. +),
-   data-since = a year; the number of years since that year is calculated. */
 function initCounters() {
     const counters = document.querySelectorAll(".stat-number");
     if (counters.length === 0) {
@@ -447,10 +416,7 @@ function initLightbox() {
 }
 
 
-/* ==========================================================================
-   6. DYNAMIC PROGRAMME LIST: SEARCH, FILTER, SORT (programmes.html)
-   The cards are created with JavaScript from programmeData (js/data.js).
-   ========================================================================== */
+
 
 function initProgrammes() {
     const list = byId("programmeList");
@@ -541,11 +507,11 @@ function initProgrammes() {
         return card;
     }
 
-    /* Draws the cards. append = true only adds the next cards ("Load more"). */
+   
     function render(append) {
         const results = getResults();
         const shown = results.slice(0, state.visible);
-        const fragment = document.createDocumentFragment();   /* adds all cards to the page in one go */
+        const fragment = document.createDocumentFragment();   
 
         const firstNew = append ? list.children.length : 0;
         shown.slice(firstNew).forEach(function (programme) {
@@ -567,7 +533,6 @@ function initProgrammes() {
         loadMoreButton.hidden = shown.length >= results.length;
     }
 
-    /* Waits until the visitor stops typing before searching */
     let typingTimer = null;
     searchInput.addEventListener("input", function () {
         window.clearTimeout(typingTimer);
@@ -832,14 +797,7 @@ function updateCounter(area) {
 }
 
 
-/* ==========================================================================
-   8. ENQUIRY FORM (enquiry.html)
-   After validation the enquiry is processed and a response is shown
-   (volunteer spots, a sponsorship cost estimate, or opening hours).
-   The data is also sent with AJAX (fetch) so the page does not reload.
-   ========================================================================== */
 
-/* AJAX: sends the form data in the background and tells us whether it worked */
 function sendFormWithAjax(form, formData) {
     const body = new URLSearchParams(formData).toString();
     const controller = new AbortController();
@@ -986,8 +944,7 @@ function initEnquiryForm() {
     startDate.min = toDateString(today);
     startDate.max = toDateString(new Date(today.getFullYear() + 1, today.getMonth(), today.getDate()));
 
-    /* Shows the extra fields that belong to the chosen enquiry type.
-       Fields in a disabled fieldset are not validated and not sent. */
+ 
     function showExtraFields() {
         const isVolunteer = typeSelect.value === "Volunteer Sign-Up";
         const isSponsor = typeSelect.value === "Donor / Sponsor Enquiry";
@@ -1091,13 +1048,7 @@ function initEnquiryForm() {
 }
 
 
-/* ==========================================================================
-   9. CONTACT FORM (contact.html)
-   After validation the message is compiled into an email. The visitor can
-   open it in their own email app (mailto link) and send it to RECIPIENT_EMAIL.
-   ========================================================================== */
 
-/* Removes line breaks from single-line values so nobody can add extra email headers */
 function singleLine(text) {
     return text.replace(/[\r\n]+/g, " ").trim();
 }
@@ -1324,10 +1275,7 @@ function initMap() {
 }
 
 
-/* ==========================================================================
-   11. START-UP
-   Each function checks that its own elements exist, so one file can be used by every page.
-   ========================================================================== */
+
 
 document.addEventListener("DOMContentLoaded", function () {
     initReveal();

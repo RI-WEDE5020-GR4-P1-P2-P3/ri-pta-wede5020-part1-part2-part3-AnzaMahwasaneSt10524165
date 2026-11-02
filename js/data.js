@@ -1,16 +1,5 @@
 /* ==========================================================================
-   Rudzani Community Outreach - data.js (Part 3)
-   Content used by script.js to build the page dynamically (DOM manipulation).
-   The data is kept in a JavaScript file (not a .json file) so the website
-   also works when index.html is opened straight from the folder (file://),
-   because browsers block fetch() on local files.
-
-   NOTE: the volunteer spots and sponsorship rates below are SAMPLE values
-   created for this assignment. The organisation can change them here and
-   every page will update automatically.
-   ========================================================================== */
-
-/* --- Programme activities (used on programmes.html and in the enquiry form) --- */
+   Rudzani Community Outreach */
 const programmeData = [
     {
         id: "daily-meals",
@@ -104,14 +93,13 @@ const programmeData = [
     }
 ];
 
-/* --- Sponsorship cost per child per month (sample rates in South African Rand) --- */
 const sponsorRates = {
     "Daily Hot Meals": { perChildPerMonth: 440, note: "about R20 a meal for 22 school days" },
     "Tutoring Materials": { perChildPerMonth: 150, note: "books, stationery and printing" },
     "Weekend Workshops": { perChildPerMonth: 200, note: "facilitators, refreshments and materials" }
 };
 
-/* --- Programme "quick view" details used by the modal on index.html --- */
+
 const quickViewData = {
     nutrition: {
         title: "Daily Nutrition",
@@ -139,13 +127,12 @@ const quickViewData = {
     }
 };
 
-/* --- Organisation details used by the map and the contact form --- */
+
 const organisation = {
     name: "Rudzani Community Outreach",
     email: "info@rudzanioutreach.org.za",
     address: "Main Road, Tshisaulu, Thohoyandou, Limpopo, South Africa",
-    /* Approximate map position (centre of Thohoyandou). Replace with the exact
-       latitude and longitude of the organisation if it is known. */
+    
     lat: -22.9456,
     lng: 30.4850
 };
