@@ -234,4 +234,11 @@ This changelog groups the project's GitHub commits into released versions. Commi
 
 ## 11. References
 
-GitHub Docs (2024) *About commits*; Google Fonts (2024) *Nunito*; MDN Web Docs (2024) *Responsive images*, *Using media queries*, *IntersectionObserver API* and *Fetch API*; Leaflet.js (2024) *Leaflet documentation* (leafletjs.com); OpenStreetMap contributors (2024) *OpenStreetMap* (openstreetmap.org); jQuery Foundation (2024) *jQuery API documentation* (api.jquery.com); schema.org (2024) *NGO schema*; Google Search Central (2024) *SEO Starter Guide*; Pexels (2024) *Free stock videos*; W3Schools (2024) *CSS Flexbox*, *CSS Grid Layout* and *HTML Video tag*.
+GitHub Docs (2024) *About commits*; Google Fonts (2024) 
+*Nunito*; MDN Web Docs (2024) *Responsive images*, *Using media queries*, *IntersectionObserver API* and *Fetch API*; Leaflet.js (2024)
+*Leaflet documentation* (leafletjs.com); OpenStreetMap contributors (2024) 
+*OpenStreetMap* (openstreetmap.org); jQuery Foundation (2024)
+*jQuery API documentation* (api.jquery.com); schema.org (2024)
+*NGO schema*; Google Search Central (2024)
+*SEO Starter Guide*; Pexels (2024) 
+*Free stock videos*; W3Schools (2024) *CSS Flexbox*, *CSS Grid Layout* and *HTML Video tag*.
